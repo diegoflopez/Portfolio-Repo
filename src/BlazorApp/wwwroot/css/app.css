@@ -12,6 +12,9 @@ body {
   width: 100%;
   font-family: "Montserrat", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 div#main {
   display: flex;
@@ -235,6 +238,11 @@ img.social-icon {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
-html {
-      scroll-behavior: smooth;
+@keyframes slideInLeft {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
     }
