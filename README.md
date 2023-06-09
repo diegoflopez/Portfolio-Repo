@@ -1,13 +1,9 @@
 
 #Built with .NET (Blazor) Template with GitHub Codespaces
 
-_Welcome_ ✨
+_Welcome to my porfolio!._ ✨
 
-## About this portfolio template
 
-In this "choose your own adventure" template portfolio, we have a [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor?WT.mc_id=dotnet-82024-juyoo) based web application ready for you to easily customize and deploy using only your web browser.  
-
-![Blazor WebAssembly profile web application](./images/blazorwasm-portfolio-site.gif "Blazor WebAssembly profile web application")
 
 ### Quick Start
 
