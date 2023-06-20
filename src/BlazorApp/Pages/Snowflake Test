@@ -1,4 +1,4 @@
-@page "/"
+@page "/Snowflake"
 @inject HttpClient Http
 @inject HeroImageService HeroImageService
 
