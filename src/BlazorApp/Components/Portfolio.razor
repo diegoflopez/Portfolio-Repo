@@ -12,7 +12,7 @@
             {
                 <img src="@(hero.Src)" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;" 
                     alt="@(hero.Alt)" />
-            }
+            }            
         </div>
         <div class="container">
             @foreach (var project in projects)
@@ -25,13 +25,14 @@
                 </div>
             }
         </div>
-        <div class="new-section">
-            <h2>New Section Title</h2>
-            <p>Some introductory text or description here...</p>
-            <img src="path/to/image.jpg" alt="Image description" />
-        </div>
     }
     </div>
+<div class="new-section">
+            <h2>Snowflake Training Lab</h2>
+            <p>Some 123123 text or description here...</p>
+            <img src="/images/snowlg.jpg" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;" 
+                    alt="333" />
+</div>
 </section>
 
 @code {
@@ -43,7 +44,7 @@
 
     private List<Project>? projects;
     private HeroImage? hero;
-
+    //private HeroImage? hero1;
     protected override async Task OnInitializedAsync()
     {
         projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
