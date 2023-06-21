@@ -1,12 +1,12 @@
 [
   {
-    "title": "📢 Exciting news! Check out my latest article 🚀🔍",
+    "title": "📢 Previous Articles... 🚀🔍",
     "description": "Discover how iterative approaches can be employed to refine and fine-tune the model, resulting in more accurate and contextually relevant responses.",
     "url": "https://www.linkedin.com/pulse/improving-chatgpt-response-quality-iterate-repeat-diego-lopez%3FtrackingId=b3dhFMn%252FQKCiDNwMBH53Pw%253D%253D/?trackingId=b3dhFMn%2FQKCiDNwMBH53Pw%3D%3D"
   },
   {
-    "title": "Web Development for Beginners",
-    "description": "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
+    "title": "📢 Exciting news! Check out my latest article 🚀🔍",
+    "description": "Discover how iterative approaches can be employed to refine and fine-tune the model, resulting in more accurate and contextually relevant responses. 🎯💡s",
     "url": "https://github.com/microsoft/web-dev-for-beginners"
   },
   {
@@ -15,8 +15,8 @@
     "url": "www.linkedin.com/in/diego-lopez-531803a0"
   },
   {
-    "title": "GitHub123344 Codespaces and github.dev",
-    "description": "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    "url": "/Snowflake"
+    "title": "GitHub",
+    "description": "Link to my personal Github.",
+    "url": "https://github.com/diegoflopez"
   }
 ]
