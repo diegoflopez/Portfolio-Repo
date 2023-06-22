@@ -30,6 +30,39 @@
     }
     </div>
 </section>
+//second section
+<section class="light" id="portfolio2">
+    <h2>Projects2</h2>
+    <div class="portfolio-container">
+    @if (projects is null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="portfolio-hero">
+            @if (hero is not null)
+            {
+                <img src="@(hero.Src)" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;" 
+                    alt="@(hero.Alt)" />
+            }            
+        </div>
+        <div class="container">
+            @foreach (var project in projects2)
+            {
+                <div class="box" key="@project.Title">
+                    <a href="@project.Url" target="_blank" rel="noopener noreferrer">
+                        <h3 style="flex-basis: 40px;">@project.Title</h3>
+                    </a>
+                    <p class="small">@project.Description</p>
+                </div>
+            }
+        </div>
+        
+    }
+    </div>
+</section>
+//end secondg
 <section class="light" id="portfolio2">
     <div class="container">
         <h2>Portfolio</h2>
@@ -38,7 +71,7 @@
                 <img src="images/Snowflake.jpg" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;"  alt="Image 1" />
                 <div class="slideshow-description">
                     <div>
-                        <h3>Image 1</h3>
+                        <h3>11Image 1</h3>
                         <p>111Description for Image 1</p>
                     </div>
                 </div>

@@ -1,0 +1,13 @@
+[
+    {
+      "title": "Proyecto 1 duro inseguro",
+      "description": "In my professional journey as a business analyst and developer, I embarked on an exciting project: creating a cutting-edge chatbot using Microsoft Power Virtual Agents. Our goal was to seamlessly integrate it into our company's website, offering real-time, contextually relevant responses based on selected web content. This forward-thinking initiative aimed to enhance customer satisfaction by promptly addressing unexpected inquiries.To streamline communication within our team, I utilized Power Automate to connect Microsoft Teams with ChatGPT. This ingenious solution allowed effortless exchange of questions and answers in the familiar Teams environment. By intelligently routing relevant queries using keywords, the chatbot directed them to ChatGPT for further analysis. To ensure smooth troubleshooting, I implemented a confirmation mechanism, verifying prompt delivery. Finally, the chatbot presented the generated response as a polished message within a designated Teams Channel, fostering enhanced collaboration.These groundbreaking solutions optimized internal processes and revolutionized customer engagement and support. Leveraging Microsoft Power Virtual Agents and Power Automate, we provided real-time assistance, surpassing expectations. Simultaneously, seamless information exchange within our organization drove efficiency, productivity, and propelled our business towards unprecedented growth and success.",
+      "url": "pages"
+    },
+    {
+      "title": "Proyecto 2 Databricks",
+      "description": "Link to projects with different technologies and frameworks.",
+      "url": "Projects"
+    }
+  ]
+  
