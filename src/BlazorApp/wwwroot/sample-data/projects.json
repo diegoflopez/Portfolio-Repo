@@ -1,22 +1,27 @@
 [
   {
     "title": "📢 Previous Articles... 🚀🔍",
-    "description": "Discover how iterative approaches can be employed to refine and fine-tune the model, resulting in more accurate and contextually relevant responses.",
-    "url": "https://www.linkedin.com/pulse/improving-chatgpt-response-quality-iterate-repeat-diego-lopez%3FtrackingId=b3dhFMn%252FQKCiDNwMBH53Pw%253D%253D/?trackingId=b3dhFMn%2FQKCiDNwMBH53Pw%3D%3D"
+    "description": "A brief overview of one of my latest prompt engineering challenges. 😀",
+    "url": "https://www.linkedin.com/pulse/prompt-engineering-examples-vs-descriptions-diego-lopez"
   },
   {
     "title": "📢 Exciting news! Check out my latest article 🚀🔍",
     "description": "Discover how iterative approaches can be employed to refine and fine-tune the model, resulting in more accurate and contextually relevant responses. 🎯💡s",
-    "url": "https://github.com/microsoft/web-dev-for-beginners"
+    "url": "https://www.linkedin.com/pulse/improving-chatgpt-response-quality-iterate-repeat-diego-lopez"
   },
   {
     "title": "My Resume Site",
     "description": "Link to my resume. Includes my experience and certifications.",
-    "url": "www.linkedin.com/in/diego-lopez-531803a0"
+    "url": "https://www.linkedin.com/in/diego-lopez-531803a0"
   },
   {
     "title": "GitHub",
     "description": "Link to my personal Github.",
     "url": "https://github.com/diegoflopez"
+  },
+  {
+    "title": "1Other Projects",
+    "description": "Link to projects with different technologies and frameworks.",
+    "url": "Projects"
   }
 ]

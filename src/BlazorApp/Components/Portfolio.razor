@@ -1,3 +1,4 @@
+@inject NavigationManager NavigationManager
 <section class="light" id="portfolio">
     <h2>Portfolio</h2>
     <div class="portfolio-container">
@@ -25,14 +26,43 @@
                 </div>
             }
         </div>
+        
     }
     </div>
-<div class="new-section">
-            <h2>Snowflake Training Lab</h2>
-            <p>Some 123123 text or description here...</p>
-            <img src="/images/snowlg.jpg" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;" 
-                    alt="333" />
-</div>
+</section>
+<section class="light" id="portfolio2">
+    <div class="container">
+        <h2>Portfolio</h2>
+        <div class="slideshow">
+            <div class="slideshow-image">
+                <img src="images/Snowflake.jpg" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;"  alt="Image 1" />
+                <div class="slideshow-description">
+                    <div>
+                        <h3>Image 1</h3>
+                        <p>111Description for Image 1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slideshow-image">
+                <img src="images/design-desk.jpeg" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;"  alt="Image 2" />
+                <div class="slideshow-description">
+                    <div>
+                        <h3>Image 2</h3>
+                        <p>Description for Image 2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slideshow-image">
+                <img src="images/woman-with-tablet.jpg" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;"  alt="Image 3" />
+                <div class="slideshow-description">
+                    <div>
+                        <h3>Image 3</h3>
+                        <p>Description for Image 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 @code {
@@ -44,10 +74,15 @@
 
     private List<Project>? projects;
     private HeroImage? hero;
-    //private HeroImage? hero1;
     protected override async Task OnInitializedAsync()
     {
         projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");
         hero = await HeroImageService.GetHeroAsync(img => img.Name is "portfolio");
     }
+    private void NavigateToProjects()
+    {
+        NavigationManager.NavigateTo("Projects");
+    }
+
+
 }
