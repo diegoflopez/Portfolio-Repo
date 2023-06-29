@@ -30,73 +30,44 @@
     }
     </div>
 </section>
-//second section
-<section class="light" id="portfolio2">
-    <h2>Projects2</h2>
-    <div class="portfolio-container">
-    @if (projects is null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <div class="portfolio-hero">
-            @if (hero is not null)
-            {
-                <img src="@(hero.Src)" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;" 
-                    alt="@(hero.Alt)" />
-            }            
-        </div>
-        <div class="container">
-            @foreach (var project in projects2)
-            {
-                <div class="box" key="@project.Title">
-                    <a href="@project.Url" target="_blank" rel="noopener noreferrer">
-                        <h3 style="flex-basis: 40px;">@project.Title</h3>
-                    </a>
-                    <p class="small">@project.Description</p>
-                </div>
-            }
-        </div>
-        
-    }
-    </div>
-</section>
-//end secondg
-<section class="light" id="portfolio2">
-    <div class="container">
-        <h2>Portfolio</h2>
-        <div class="slideshow">
-            <div class="slideshow-image">
-                <img src="images/Snowflake.jpg" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;"  alt="Image 1" />
-                <div class="slideshow-description">
-                    <div>
-                        <h3>11Image 1</h3>
-                        <p>111Description for Image 1</p>
-                    </div>
-                </div>
-            </div>
-            <div class="slideshow-image">
-                <img src="images/design-desk.jpeg" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;"  alt="Image 2" />
-                <div class="slideshow-description">
-                    <div>
-                        <h3>Image 2</h3>
-                        <p>Description for Image 2</p>
-                    </div>
-                </div>
-            </div>
-            <div class="slideshow-image">
-                <img src="images/woman-with-tablet.jpg" style="height: 90%; width: 100%; object-fit: cover;animation: 1s ease-out 0s 1 slideInLeft;"  alt="Image 3" />
-                <div class="slideshow-description">
-                    <div>
-                        <h3>Image 3</h3>
-                        <p>Description for Image 3</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<h2>Recent Projects</h2>
+<div class="parent">
+<div class="img">
+    <img src="images/Snowflake.gif" />
+</div>
+<div class="text">
+As part of my SnowPro Core Certification training, I engaged in a project that involved hands-on experience with common data management tasks in the Snowflake platform. 
+<p>
+This included essential activities like creating a file format to facilitate data ingestion, transferring data from a staging area into the "trips" table, truncating the table to remove existing data, adjusting the warehouse size for optimal performance, and efficiently loading data using a large warehouse. Additionally, I gained practical knowledge in executing queries to analyze Citi Bike usage, identify the busiest month, employ zero copy cloning techniques, handle semi-structured JSON data, create views, and perform data correlation through join operations.
+</p>
+</div>
+</div>
+
+<div class="parent">
+<div class="img">
+    <img src="images/Chatbot_Capture.JPG" />
+</div>
+<div class="text">
+I conducted an exploration of the advanced functionalities offered by OpenAI's technology by seamlessly integrating ChatGPT with Microsoft Teams. This integration facilitated real-time collaboration within my team, enabling members to collectively leverage the capabilities of ChatGPT and instantly observe the outcomes. 
+
+<p>The integration was achieved through the utilization of a Power Automate flow, which incorporated a trigger mechanism to capture specific keywords from the Teams app. Subsequently, the captured question content was redirected to the ChatGPT API for processing, and the generated response was seamlessly delivered back into the chat interface for immediate viewing by the team members.
+</p>
+</div>
+</div>
+
+<div class="parent">
+<div class="img">
+    <img src="images/TEamsGPT.JPG" />
+</div>
+<div class="text">
+In my professional journey, I embarked on an exciting project to create a cutting-edge chatbot using Microsoft Power Virtual Agents. The goal was to integrate it into our company's website, offering real-time responses based on selected web content to enhance customer satisfaction. 
+<p>
+To streamline communication, I used Power Automate to connect Microsoft Teams with ChatGPT, allowing effortless exchange of questions and answers. The chatbot intelligently routed relevant queries and verified prompt delivery. The generated responses were later saved in a share Excel file, fostering collaboration. These solutions optimized internal processes, revolutionized customer engagement, and drove business growth through real-time assistance and efficient information exchange.
+</p>
+
+</div>
+</div>
+
 
 @code {
     [Parameter, EditorRequired]
@@ -106,7 +77,7 @@
     public required HeroImageService HeroImageService { get; set; }
 
     private List<Project>? projects;
-    private HeroImage? hero;
+     private HeroImage? hero;
     protected override async Task OnInitializedAsync()
     {
         projects = await Http.GetFromJsonAsync<List<Project>>("sample-data/projects.json");

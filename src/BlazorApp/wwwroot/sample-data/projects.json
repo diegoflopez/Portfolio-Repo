@@ -18,10 +18,5 @@
     "title": "GitHub",
     "description": "Link to my personal Github.",
     "url": "https://github.com/diegoflopez"
-  },
-  {
-    "title": "1Other Projects",
-    "description": "Link to projects with different technologies and frameworks.",
-    "url": "Projects"
   }
 ]
