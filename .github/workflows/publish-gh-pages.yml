@@ -1,90 +1,62 @@
 name: Publish Blazor App to GitHub Pages
 
-on: [ push, workflow_dispatch ]
+on:
+  push:
+    branches: [ "main" ]      # adapt if your default branch is different
+  workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Minimum permissions required by the latest Pages actions
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+  contents: read          # repository checkout
+  pages: write            # publish to Pages
+  id-token: write         # provenance & OIDC
+  actions: read           # required by deploy-pages@v4
 
-# Allow one concurrent deployment
+# Prevent parallel deployments
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  build_test_artifact:
-    name: Build App
-
+  build:
+    name: Build and package site
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: '7.x'
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4         # latest major version:contentReference[oaicite:0]{index=0}
+        with:
+          dotnet-version: '7.x'
 
-    # - name: Set basepath on index.html
-    #   shell: pwsh
-    #   run: |
-    #     $filepath = "./src/BlazorApp/wwwroot/index.html"
-    #     $repository = "${{ github.repository }}" -replace "${{ github.repository_owner }}", ""
+      - name: Restore dependencies
+        run: dotnet restore
 
-    #     $html = Get-Content -Path $filepath
-    #     $html -replace "<base href=`"/`" />", "<base href=`"$repository/`" />" | Out-File -Path $filepath -Force
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
 
-    # - name: Set basepath on JSON objects
-    #   shell: pwsh
-    #   run: |
-    #     $filepath = "./src/BlazorApp/wwwroot/sample-data"
-    #     $repository = "${{ github.repository }}" -replace "${{ github.repository_owner }}", ""
+      - name: Test
+        run: dotnet test --configuration Release --no-build --verbosity normal
 
-    #     Get-ChildItem -Path $filepath -Filter "*.json" | ForEach-Object {
-    #       $json = Get-Content -Path $_.FullName
-    #       $json.Replace("../", "$repository/") | Out-File -Path $_.FullName -Force
-    #     }
+      - name: Publish for static hosting
+        run: dotnet publish src/BlazorApp --configuration Release --output published
 
-    - name: Restore NuGet packages
-      shell: bash
-      run: |
-        dotnet restore .
-
-    - name: Build solution
-      shell: bash
-      run: |
-        dotnet build .
-
-    - name: Test solution
-      shell: bash
-      run: |
-        dotnet test . -c Release
-
-    - name: Publish artifact
-      shell: bash
-      run: |
-        dotnet publish src/BlazorApp -c Release -o published
-
-    - name: Upload artifact for web
-      uses: actions/upload-pages-artifact@v1
-      with:
-        path: published/wwwroot
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3 # wraps upload-artifact@v4:contentReference[oaicite:1]{index=1}
+        with:
+          path: published/wwwroot              # folder to serve
 
   deploy:
-    name: Deploy App to GitHub Pages
-    needs:
-    - build_test_artifact
-
+    name: Deploy to GitHub Pages
+    needs: build
     runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v1
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4          # requires v3/v4 artifact upload:contentReference[oaicite:2]{index=2}
