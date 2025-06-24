@@ -275,18 +275,33 @@ img.social-icon {
 .inline-badge {
     margin-top: 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
 }
 
 .inline-badge img {
     max-width: 90%;
     height: auto;
+    width: 100%;
     border-radius: 0.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
+.hero-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 900px;
+    gap: 1rem;
+}
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
 }
+.hero-block h2 {
+    text-align: left;
+    margin: 0; /* Optional: tighten spacing */
+}
+
