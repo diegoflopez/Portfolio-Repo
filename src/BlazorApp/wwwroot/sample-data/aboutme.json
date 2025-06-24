@@ -1,12 +1,17 @@
 {
-  "description": "I am a dynamic, dependable, and diligent professional with a remarkable aptitude for adaptability and rapid learning. Backed by a wealth of experience in the field of networking solutions, I possess a strong track record of success. In my most recent role as a business analyst, I honed my expertise in data analysis, cultivated exceptional teamwork and leadership skills, and demonstrated the ability to excel under pressure. My unwavering commitment to growth and advancement drives me to constantly seek improvement through continuous learning and educational pursuits, all while remaining focused on achieving tangible results aligned with my professional objectives.",
-  "skills": [
-    "Scrum Foundation Professional Certificate - SFPC™",
-    "Experienced with Power BI",
-    "Machine Learning Enthusiast",
-    "Experienced with python, R and a bit of C#",
-    "Experienced with Microsoft SQL Server",
-    "Currently Developing an intitiative using ChatGPT for data analysis"
-  ],
+  "description": "I am a Senior Data Analyst with a strong background in networking solutions and proven expertise in data analytics and business intelligence. I specialize in using Python, Microsoft Fabric, and modern data architecture to design efficient data warehouses and lakehouse solutions that drive business impact. In my recent role, I led end-to-end analytics workflows—transforming complex data into actionable insights and enabling strategic decision-making across teams. I hold a Microsoft Fabric certification, validating my technical proficiency, and my LinkedIn recommendations reflect a consistent track record of delivering high-quality work and collaborative leadership. Ready for the next challenge, I’m equipped to take on senior-level responsibilities and lead innovative, data-driven initiatives.",
+"skills": [
+  "Microsoft Fabric Certified",
+  "Experienced with Power BI, Power Apps integration, and Microsoft Fabric",
+  "Proficient in Python and R; familiar with C#",
+  "Data migration and log analysis automation using Python, Pandas, and scripting",
+  "Experienced with Microsoft SQL Server and data warehouse design",
+  "Skilled in building efficient lakehouse architectures",
+  "ETL development and pipeline automation from SharePoint using PySpark",
+  "Scrum Foundation Professional Certificate - SFPC™",
+  "Machine Learning Enthusiast",
+  "Developed API integration to apply ChatGPT/LLM models on compiled datasets for insight generation",
+  "Strong understanding of data analytics pipelines and BI strategy"
+],
   "detailOrQuote": "I am constantly on the lookout for opportunities to enhance both my personal and professional development, as I am dedicated to making meaningful contributions to the ongoing progress of my colleagues and our collective work team."
 }
