@@ -272,4 +272,24 @@ img.social-icon {
       height:450px; /* you can change height */
       vertical-align:middle;
   }
-  
+.floating-badge {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.floating-badge img {
+    max-height: 150px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
